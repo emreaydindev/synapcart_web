@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { LogoMark } from "@/components/Logo";
-import { PlayBadge } from "@/components/PlayBadge";
+import { StoreBadges } from "@/components/StoreBadges";
 import { plans, site } from "@/lib/site";
 import styles from "./page.module.css";
 
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: "Premium aboneliğimi nasıl iptal ederim?",
-    a: "Abonelikler Google Play üzerinden yönetilir. Google Play › Profil › Ödemeler ve abonelikler › Abonelikler bölümünden istediğin zaman iptal edebilirsin; dönem sonuna kadar Premium devam eder.",
+    a: "Aboneliği satın aldığın mağaza yönetir. iPhone’da Ayarlar › [adın] › Abonelikler, Android’de Google Play › Profil › Ödemeler ve abonelikler › Abonelikler bölümünden istediğin zaman iptal edebilirsin; dönem sonuna kadar Premium devam eder.",
   },
   {
     q: "Verilerim güvende mi?",
@@ -126,7 +126,7 @@ export default function Home() {
               gezmeye son.
             </p>
             <div className={styles.heroActions} id="indir">
-              <PlayBadge />
+              <StoreBadges />
               <Link href="#nasil-calisir" className="btn btn-secondary">
                 Nasıl çalışır?
               </Link>
@@ -217,7 +217,7 @@ export default function Home() {
           <h2 id="fiyat-baslik" className={styles.h2}>
             Ücretsiz başla, istersen Premium’a geç
           </h2>
-          <p className="muted">Premium, Google Play üzerinden aylık veya yıllık abonelikle sunulur. Güncel fiyatlar uygulamadaki Premium ekranında gösterilir.</p>
+          <p className="muted">Premium, App Store veya Google Play üzerinden aylık ya da yıllık abonelikle sunulur. Güncel fiyatlar uygulamadaki Premium ekranında gösterilir.</p>
         </div>
         <div className={styles.plans}>
           <div className={`card ${styles.plan}`}>
@@ -305,8 +305,8 @@ export default function Home() {
         <div className={`card ${styles.cta}`}>
           <LogoMark size={64} />
           <h2 className={styles.h2}>Bir sonraki alışverişini SynapCart’a sor</h2>
-          <p className="muted">Ücretsiz indir, saniyeler içinde başla.</p>
-          <PlayBadge />
+          <p className="muted">iPhone ve Android için ücretsiz indir, saniyeler içinde başla.</p>
+          <StoreBadges />
         </div>
       </section>
     </>

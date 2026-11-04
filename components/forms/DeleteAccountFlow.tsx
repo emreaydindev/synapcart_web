@@ -26,7 +26,11 @@ function DeletedData() {
         <li>Favorilerin ve fiyat alarmların</li>
       </ul>
       <p className={styles.infoNote}>
-        Silme anında gerçekleşir ve geri alınamaz. Google Play aboneliğin otomatik iptal edilmez; onu{" "}
+        Silme anında gerçekleşir ve geri alınamaz. Aboneliğin otomatik iptal edilmez; onu{" "}
+        <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener noreferrer">
+          App Store’dan
+        </a>{" "}
+        veya{" "}
         <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">
           Google Play’den
         </a>{" "}

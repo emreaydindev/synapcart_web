@@ -1,0 +1,25 @@
+// SynapCart web portal on Cloudflare Workers via OpenNext (@opennextjs/cloudflare).
+//   production: https://synapcart.emreaydin.dev          (`npm run deploy`)
+//   staging:    https://staging.synapcart.emreaydin.dev  (`npm run deploy:staging`)
+// NEXT_PUBLIC_* values are inlined at build time: production reads .env.production,
+// the staging script overrides them on the command line.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "synapcart-web",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "observability": { "enabled": true },
+  "workers_dev": false,
+  "routes": [{ "pattern": "synapcart.emreaydin.dev", "custom_domain": true }],
+  "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "synapcart-web" }],
+
+  "env": {
+    "staging": {
+      "name": "synapcart-web-staging",
+      "routes": [{ "pattern": "staging.synapcart.emreaydin.dev", "custom_domain": true }],
+      "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "synapcart-web-staging" }]
+    }
+  }
+}
