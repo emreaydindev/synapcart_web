@@ -1,0 +1,57 @@
+.page {
+  position: relative;
+  min-height: calc(100dvh - 68px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px var(--gutter) 24px;
+}
+.glow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(520px 360px at 20% 10%, rgba(45, 212, 180, 0.1), transparent 70%),
+    radial-gradient(480px 320px at 85% 90%, rgba(51, 214, 255, 0.08), transparent 70%);
+}
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 32px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  animation: rise 0.45s ease both;
+}
+.wide {
+  max-width: 560px;
+}
+.mark {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.title {
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+.subtitle {
+  margin-top: 10px;
+  margin-bottom: 28px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    padding: 32px 20px;
+  }
+}

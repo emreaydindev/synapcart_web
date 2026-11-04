@@ -1,0 +1,161 @@
+.wrap {
+  padding-top: 56px;
+}
+.head {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+.head h1 {
+  font-size: clamp(32px, 4.4vw, 46px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.updated {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.intro {
+  margin-top: 20px;
+  font-size: 17px;
+  color: var(--text-muted);
+}
+.intro p + p {
+  margin-top: 12px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+.toc {
+  position: sticky;
+  top: 92px;
+  font-size: 14px;
+}
+.tocTitle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.toc ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 1px solid var(--outline);
+}
+.toc a {
+  display: block;
+  padding: 6px 0 6px 14px;
+  margin-left: -1px;
+  border-left: 2px solid transparent;
+  color: var(--text-muted);
+}
+.toc a:hover {
+  color: var(--text);
+  border-left-color: var(--primary);
+}
+.prose {
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.prose section {
+  scroll-margin-top: 92px;
+  padding-bottom: 12px;
+}
+.prose section + section {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(34, 48, 74, 0.6);
+}
+.prose h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.num {
+  color: var(--primary);
+}
+.prose h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 20px 0 6px;
+}
+.prose p,
+.prose ul,
+.prose ol {
+  color: #c8d2e3;
+}
+.prose p + p,
+.prose p + ul,
+.prose ul + p,
+.prose p + ol,
+.prose ol + p {
+  margin-top: 12px;
+}
+.prose ul,
+.prose ol {
+  padding-left: 22px;
+}
+.prose li + li {
+  margin-top: 6px;
+}
+.prose li::marker {
+  color: var(--primary);
+}
+.prose strong {
+  color: var(--text);
+}
+.prose a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+}
+.prose th,
+.prose td {
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--outline);
+}
+.prose th {
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .toc {
+    position: static;
+    padding: 16px 20px;
+    border: 1px solid var(--outline);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+  }
+  .toc ol {
+    border-left: none;
+  }
+  .toc a {
+    padding-left: 0;
+    border-left: none;
+  }
+}

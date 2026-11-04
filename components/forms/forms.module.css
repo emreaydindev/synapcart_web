@@ -1,0 +1,143 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 4px;
+}
+.center {
+  text-align: center;
+  font-size: 15px;
+}
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+}
+.optionTitle {
+  font-size: 17px;
+  font-weight: 700;
+}
+.steps {
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #c8d2e3;
+}
+.steps li::marker {
+  color: var(--primary);
+  font-weight: 700;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--outline);
+}
+.infoBox {
+  padding: 16px 18px;
+  border-radius: var(--radius-lg);
+  background: var(--error-container);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  font-size: 14px;
+}
+.infoTitle {
+  font-weight: 700;
+  color: #fecaca;
+  margin-bottom: 6px;
+}
+.infoList {
+  padding-left: 20px;
+  color: #c8d2e3;
+}
+.infoNote {
+  margin-top: 10px;
+  color: var(--text-muted);
+}
+.infoNote a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.check input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--error);
+}
+.textLink {
+  align-self: center;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.textLink:hover {
+  color: var(--text);
+}
+.successIcon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 4px;
+  border-radius: 50%;
+  background: rgba(45, 212, 180, 0.12);
+  border: 1px solid rgba(45, 212, 180, 0.35);
+  color: var(--primary);
+}
+.strength {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.meter {
+  height: 4px;
+  border-radius: 4px;
+  background: var(--outline);
+  overflow: hidden;
+}
+.meterFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+.rules {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.rules li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ruleOk {
+  color: var(--primary);
+}

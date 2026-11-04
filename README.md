@@ -1,70 +1,52 @@
 # SynapCart Web
 
-SynapCart'ın kullanıcıya yönelik web arayüzüdür. Next.js ile geliştirilmiş bu uygulama, şu an için yalnızca e-posta tabanlı şifre sıfırlama sayfasını barındırmaktadır ve Vercel üzerinde yayınlanmaktadır.
+SynapCart'ın web sitesi: tanıtım sayfası, yasal sayfalar (gizlilik, kullanım koşulları), destek, hesap silme ve şifre sıfırlama. Next.js ile geliştirildi ve Vercel üzerinde yayınlanır.
 
-## Özellikler
+## Sayfalar
 
-- Şifre sıfırlama sayfası (token doğrulama, şifre güç göstergesi, hata yönetimi)
-- SynapCart mobil uygulamasıyla uyumlu dark/neon tema
-- Backend API ile otomatik entegrasyon (Render üzerindeki FastAPI servisi)
+| Yol | İçerik |
+|---|---|
+| `/` | Tanıtım: özellikler, nasıl çalışır, Ücretsiz / Premium, SSS |
+| `/privacy` | Gizlilik Politikası (KVKK ve GDPR) |
+| `/terms` | Kullanım Koşulları (abonelik ve iade dahil) |
+| `/support` | Destek ve iletişim |
+| `/delete-account` | Hesap silme (uygulama adımları ve e-posta onaylı web talebi) |
+| `/reset-password?token=…` | Şifre sıfırlama (backend'in gönderdiği e-postadaki bağlantı) |
+| `/.well-known/assetlinks.json` | Android App Links doğrulaması |
 
-## Teknik Yığın
+## Teknik yığın
 
-- **Framework:** Next.js 14 (App Router)
-- **Dil:** TypeScript
-- **Deploy:** Vercel
+- Next.js 16 (App Router), React 19, TypeScript
+- Düz CSS (CSS değişkenleri ve CSS modülleri), Plus Jakarta Sans (yerel font)
+- Deploy: Vercel
 
-## Kurulum ve Başlatma
-
-### 1. Bağımlılıkları Yükle
+## Kurulum
 
 ```bash
 npm install
-```
-
-### 2. Yapılandırma
-
-Ana dizinde `.env.local` adında bir dosya oluşturun:
-
-```ini
-NEXT_PUBLIC_API_URL=http://localhost:8001
-```
-
-Production için bu değer Render'daki backend URL'iniz olmalıdır.
-
-### 3. Geliştirme Sunucusunu Başlat
-
-```bash
+cp .env.example .env.local
 npm run dev
 ```
 
-Uygulama `http://localhost:3000` adresinde çalışacaktır.
+`.env.local`:
 
-### 4. Şifre Sıfırlama Sayfasını Test Et
-
+```ini
+NEXT_PUBLIC_API_URL=http://localhost:8001   # zorunlu; backend adresi
+NEXT_PUBLIC_SITE_URL=http://localhost:3000  # kanonik URL, OpenGraph, sitemap
 ```
-http://localhost:3000/reset-password?token=test123
+
+Uygulama `http://localhost:3000` adresinde çalışır. Şifre sıfırlamayı `http://localhost:3000/reset-password?token=test123` ile deneyebilirsin.
+
+## Kontroller
+
+```bash
+npm run lint
+npm run build
 ```
 
 ## Deploy (Vercel)
 
-1. Repoyu GitHub'a push edin
-2. [Vercel](https://vercel.com) üzerinde projeyi import edin
-3. Environment variable olarak şunu ekleyin:
-
-```
-NEXT_PUBLIC_API_URL=https://your-backend.onrender.com
-```
-
-4. Deploy edin
-
-## Proje Yapısı
-
-```
-synapcart-web/
-├── app/
-│   └── reset-password/
-│       └── page.tsx      # Şifre sıfırlama sayfası
-├── next.config.ts         # API proxy ayarları
-└── .env.local             # Ortam değişkenleri (git'e ekleme)
-```
+1. Projeyi Vercel'e import et.
+2. `NEXT_PUBLIC_API_URL` (Render backend adresi) ve `NEXT_PUBLIC_SITE_URL` (ör. `https://synapcart.app`) ortam değişkenlerini ekle.
+3. Alan adını (`synapcart.app`) Vercel'e yönlendir; uygulamanın derin bağlantıları ve backend'in `APP_FRONTEND_URL` değeri bu alan adını kullanır.
+4. `public/.well-known/assetlinks.json` içindeki parmak izini Play Console'daki uygulama imzalama SHA-256 değeriyle değiştir.
