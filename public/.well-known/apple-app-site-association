@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["REPLACE_WITH_TEAM_ID.com.neilb.synapcart"],
+        "components": [
+          { "/": "/reset-password", "?": { "token": "?*" }, "comment": "Password reset links from email open the app" }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["REPLACE_WITH_TEAM_ID.com.neilb.synapcart"]
+  }
+}

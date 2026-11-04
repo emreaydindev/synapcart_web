@@ -47,14 +47,27 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          Abonelikler Google Play üzerinden yönetilir. İptal etmek veya ödeme yöntemini değiştirmek için{" "}
-          <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">
-            Google Play abonelikleri
-          </a>{" "}
-          sayfasını aç ya da uygulamada <strong>Profil › Aboneliği yönet</strong> adımını izle.
+          Abonelikleri satın aldığın mağaza yönetir. Uygulamada <strong>Profil › Aboneliği yönet</strong> adımını izleyebilir
+          ya da doğrudan mağazayı açabilirsin:
         </p>
+        <ul>
+          <li>
+            <strong>iPhone:</strong> Ayarlar › [adın] › Abonelikler ya da{" "}
+            <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener noreferrer">
+              App Store abonelikleri
+            </a>
+            . Yeni cihazda Premium’u geri almak için Premium ekranındaki <strong>Satın alımları geri yükle</strong> düğmesini kullan.
+          </li>
+          <li>
+            <strong>Android:</strong>{" "}
+            <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">
+              Google Play abonelikleri
+            </a>
+            .
+          </li>
+        </ul>
         <p>
-          İade talepleri Google Play üzerinden yapılır. Ayrıntılar için <Link href="/terms#iade">Kullanım Koşulları</Link>’na
+          İade talepleri satın aldığın mağaza üzerinden yapılır. Ayrıntılar için <Link href="/terms#iade">Kullanım Koşulları</Link>’na
           bak.
         </p>
       </>

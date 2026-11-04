@@ -102,18 +102,29 @@ const sections: LegalSection[] = [
     title: "Abonelik, yenileme ve iptal",
     body: (
       <ul>
-        <li>Premium, Google Play üzerinden aylık veya yıllık otomatik yenilenen abonelik olarak satılır. Güncel fiyat satın alma ekranında gösterilir.</li>
-        <li>Ödeme, satın alma onaylandığında Google Play hesabından tahsil edilir.</li>
         <li>
-          Abonelik, dönem bitmeden en az 24 saat önce iptal edilmezse aynı süre ve fiyatla otomatik olarak yenilenir. Fiyat
-          değişikliklerinde Google Play seni önceden bilgilendirir.
+          Premium; iPhone’da App Store, Android’de Google Play üzerinden aylık veya yıllık otomatik yenilenen abonelik olarak
+          satılır. Güncel fiyat satın alma ekranında gösterilir.
+        </li>
+        <li>Ödeme, satın alma onaylandığında Apple Kimliği hesabından (App Store) veya Google Play hesabından tahsil edilir.</li>
+        <li>
+          Abonelik, dönem bitmeden en az 24 saat önce iptal edilmezse aynı süre ve fiyatla otomatik olarak yenilenir; yenileme
+          ücreti dönem bitmeden önceki 24 saat içinde tahsil edilir. Fiyat değişikliklerinde mağaza seni önceden bilgilendirir.
         </li>
         <li>
-          İstediğin zaman <strong>Google Play › Profil › Ödemeler ve abonelikler › Abonelikler</strong> bölümünden iptal
-          edebilirsin. İptal ettiğinde Premium, ödediğin dönemin sonuna kadar devam eder.
+          İstediğin zaman iptal edebilirsin: iPhone’da <strong>Ayarlar › [adın] › Abonelikler</strong>, Android’de{" "}
+          <strong>Google Play › Profil › Ödemeler ve abonelikler › Abonelikler</strong>. İptal ettiğinde Premium, ödediğin
+          dönemin sonuna kadar devam eder.
         </li>
         <li>Ücretsiz deneme sunulursa, deneme bitmeden iptal etmediğin sürece ücretli aboneliğe dönüşür.</li>
-        <li>Hesabını silmek aboneliği iptal etmez; aboneliği Google Play’den ayrıca iptal etmelisin.</li>
+        <li>Hesabını silmek aboneliği iptal etmez; aboneliği satın aldığın mağazadan ayrıca iptal etmelisin.</li>
+        <li>
+          App Store’dan indirilen uygulama için bu koşullara ek olarak Apple’ın{" "}
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
+            Standart Son Kullanıcı Lisans Sözleşmesi (EULA)
+          </a>{" "}
+          geçerlidir.
+        </li>
       </ul>
     ),
   },
@@ -122,12 +133,17 @@ const sections: LegalSection[] = [
     title: "İade",
     body: (
       <p>
-        Ödemeler Google Play tarafından işlendiği için iade talepleri{" "}
+        Ödemeler Apple veya Google tarafından işlendiği için iade talepleri satın aldığın mağazanın politikasına tabidir: App
+        Store satın alımları için{" "}
+        <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">
+          reportaproblem.apple.com
+        </a>
+        , Google Play satın alımları için{" "}
         <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener noreferrer">
-          Google Play iade politikasına
-        </a>{" "}
-        tabidir ve Google Play üzerinden yapılır. Teknik bir sorun nedeniyle Premium’dan yararlanamadıysan {mail} adresine yaz; Google
-        Play’in izin verdiği ölçüde yardımcı oluruz. 6502 sayılı Tüketicinin Korunması Hakkında Kanun’dan doğan hakların saklıdır.
+          Google Play iade politikası
+        </a>
+        . Teknik bir sorun nedeniyle Premium’dan yararlanamadıysan {mail} adresine yaz; mağazanın izin verdiği ölçüde yardımcı
+        oluruz. 6502 sayılı Tüketicinin Korunması Hakkında Kanun’dan doğan hakların saklıdır.
       </p>
     ),
   },

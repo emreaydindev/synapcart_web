@@ -1,0 +1,13 @@
+# Headers for files served by Workers Static Assets (public/ is copied as-is).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Android App Links and iOS Universal Links must be served as JSON without redirects.
+/.well-known/assetlinks.json
+  Content-Type: application/json
+
+/.well-known/apple-app-site-association
+  Content-Type: application/json

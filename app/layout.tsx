@@ -20,6 +20,8 @@ const jakarta = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // iOS Smart App Banner; only rendered once the real App Store id is set in lib/site.ts.
+  ...(/^0+$/.test(site.appStoreId) ? {} : { itunes: { appId: site.appStoreId } }),
   title: {
     default: "SynapCart · Yapay zekâ destekli alışveriş asistanı",
     template: "%s · SynapCart",

@@ -54,7 +54,10 @@ export function SiteFooter() {
       </div>
       <div className={`container ${styles.bottom}`}>
         <span>© {new Date().getFullYear()} SynapCart</span>
-        <span>Google Play ve Google Play logosu Google LLC&apos;nin ticari markalarıdır.</span>
+        <span>
+          Apple, Apple logosu ve App Store, Apple Inc.&apos;in ticari markalarıdır. Google Play ve Google Play logosu Google
+          LLC&apos;nin ticari markalarıdır.
+        </span>
       </div>
     </footer>
   );

@@ -18,7 +18,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          Bu politika, SynapCart mobil uygulaması ve synapcart.app web sitesi (birlikte “Hizmet”) için geçerlidir. 6698 sayılı
+          Bu politika, SynapCart mobil uygulaması ve synapcart.emreaydin.dev web sitesi (birlikte “Hizmet”) için geçerlidir. 6698 sayılı
           Kişisel Verilerin Korunması Kanunu (“KVKK”) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (“GDPR”) kapsamında veri
           sorumlusu <strong>{site.controller}</strong>’dir.
         </p>
@@ -54,8 +54,8 @@ const sections: LegalSection[] = [
             <tr>
               <td>Abonelik bilgileri</td>
               <td>
-                Premium satın alırsan Google Play’in verdiği satın alma belirteci, plan türü ve bitiş tarihi. Kart bilgilerin bize
-                hiçbir zaman ulaşmaz; ödemeyi Google Play alır.
+                Premium satın alırsan mağazanın verdiği satın alma kimliği (Google Play satın alma belirteci veya App Store işlem
+                kimliği), plan türü ve bitiş tarihi. Kart bilgilerin bize hiçbir zaman ulaşmaz; ödemeyi Apple veya Google alır.
               </td>
             </tr>
             <tr>
@@ -136,28 +136,28 @@ const sections: LegalSection[] = [
               <td>Arama ifadesi, dil ve ülke/para birimi bilgisi</td>
             </tr>
             <tr>
-              <td>Render</td>
-              <td>Sunucu ve veritabanı barındırma</td>
-              <td>Hizmette saklanan tüm veriler</td>
-            </tr>
-            <tr>
-              <td>Vercel</td>
-              <td>Web sitesini barındırma</td>
-              <td>Web sitesini ziyaret ettiğinde IP adresi ve istek bilgileri; web formlarında girdiğin e-posta</td>
-            </tr>
-            <tr>
-              <td>Google (Gmail)</td>
-              <td>Şifre sıfırlama ve hesap silme e-postalarını göndermek</td>
-              <td>E-posta adresin ve e-posta içeriği</td>
+              <td>Cloudflare</td>
+              <td>
+                Sunucu, veritabanı (D1) ve web sitesi barındırma; şifre sıfırlama ve hesap silme e-postalarını göndermek
+              </td>
+              <td>
+                Hizmette saklanan tüm veriler; web sitesini ziyaret ettiğinde IP adresi ve istek bilgileri; e-posta adresin ve
+                e-posta içeriği
+              </td>
             </tr>
             <tr>
               <td>Google Play</td>
-              <td>Abonelik satın alma ve doğrulama</td>
+              <td>Android’de abonelik satın alma ve doğrulama</td>
               <td>Satın alma belirteci ve abonelik durumu</td>
             </tr>
             <tr>
+              <td>Apple (App Store)</td>
+              <td>iPhone’da abonelik satın alma ve doğrulama</td>
+              <td>İşlem kimliği, abonelik durumu ve hesabına bağlı anonim kimlik (appAccountToken)</td>
+            </tr>
+            <tr>
               <td>Google (Firebase Cloud Messaging)</td>
-              <td>Fiyat alarmı bildirimleri</td>
+              <td>Fiyat alarmı bildirimleri (iPhone’da Apple Push Notification service üzerinden)</td>
               <td>Cihaz belirteci ve bildirim içeriği</td>
             </tr>
           </tbody>
@@ -204,7 +204,8 @@ const sections: LegalSection[] = [
           favorilerin veritabanımızdan kalıcı olarak silinir ve tüm oturumların kapanır.
         </p>
         <p>
-          Hesabını silmek Google Play aboneliğini otomatik olarak iptal etmez; aboneliği Google Play’den ayrıca iptal etmelisin.
+          Hesabını silmek App Store veya Google Play aboneliğini otomatik olarak iptal etmez; aboneliği satın aldığın mağazadan
+          ayrıca iptal etmelisin.
         </p>
       </>
     ),
