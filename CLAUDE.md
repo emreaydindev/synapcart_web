@@ -29,7 +29,7 @@ There are no automated tests. Check changes with `npm run lint && npm run build`
   - `/reset-password?token=`: built by the backend's `build_reset_url`. The page POSTs `{token, new_password}` to `/api/v1/auth/reset-password`. An invalid or expired link switches to a "request a new link" form (`/auth/forgot-password`), and success opens the app through `synapcart://login`, falling back to `/`.
   - `/delete-account` and `/delete-account?token=`: built by the backend's `build_delete_url`. Without a token, the page shows the in-app steps and an email form (`POST /auth/delete-request`). With a token, it asks for confirmation and POSTs `/auth/delete-confirm`.
   - `/privacy`, `/terms` and `/support`: linked from the app's Register and Profile screens (`BuildConfig.WEB_URL`).
-- `lib/site.ts` holds the site constants (support email, data controller, Play URL, plan limits shown on the landing page). Values marked OWNER are placeholders until the owner confirms them. Keep the plan limits in sync with the backend's plan service.
+- `lib/site.ts` holds the site constants (support email, data controller, Play URL, plan limits shown on the landing page). Values marked OWNER are placeholders until the owner confirms them. Keep the plan limits in sync with the backend's `app/services/plan_service.py` and the app's paywall table.
 - `lib/api.ts` `postJson` handles network errors, non-JSON bodies, 429 and 5xx, and throws the backend's `detail` string.
 - `public/.well-known/assetlinks.json` holds a placeholder fingerprint. Replace it with the Play app-signing SHA-256 before verifying links.
 

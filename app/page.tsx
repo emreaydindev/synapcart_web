@@ -217,7 +217,7 @@ export default function Home() {
           <h2 id="fiyat-baslik" className={styles.h2}>
             Ücretsiz başla, istersen Premium’a geç
           </h2>
-          <p className="muted">Premium aylık veya yıllık abonelikle Google Play üzerinden sunulacak. Fiyatlar uygulamada gösterilir.</p>
+          <p className="muted">Premium, Google Play üzerinden aylık veya yıllık abonelikle sunulur. Güncel fiyatlar uygulamadaki Premium ekranında gösterilir.</p>
         </div>
         <div className={styles.plans}>
           <div className={`card ${styles.plan}`}>
@@ -234,7 +234,7 @@ export default function Home() {
           <div className={`card ${styles.plan} ${styles.planPremium}`}>
             <div className={styles.planHead}>
               <h3>Premium</h3>
-              <span className="badge badge-premium">Çok yakında</span>
+              <span className="badge badge-premium">Uygulama içinden</span>
             </div>
             <p className={styles.planPrice}>Aylık · Yıllık</p>
             <p className="muted">Daha fazla sonuç, daha derin analiz.</p>
@@ -242,8 +242,8 @@ export default function Home() {
               <li>Günde {plans.premium.messages} mesaj</li>
               <li>Arama başına {plans.premium.products} ürün ve derin analiz</li>
               <li>Fiyat alarmları</li>
-              <li>4 ürüne kadar karşılaştırma</li>
-              <li>Sınırsız sohbet geçmişi</li>
+              <li>{plans.premium.compare} ürüne kadar yapay zekâ karşılaştırması</li>
+              <li>{plans.premium.history} sohbet geçmişi</li>
             </ul>
           </div>
         </div>

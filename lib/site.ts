@@ -23,7 +23,9 @@ export const nav = [
   { href: "/support", label: "Destek" },
 ] as const;
 
+// Mirrors synapcart_backend app/services/plan_service.py (and the app's paywall table).
+// Change all three together. Daily message quotas reset at 00:00 UTC.
 export const plans = {
   free: { messages: 5, products: 3, history: "Son 10 sohbet" },
-  premium: { messages: 100, products: 8, history: "Sınırsız" },
+  premium: { messages: 100, products: 8, history: "Sınırsız", compare: 4 },
 } as const;
